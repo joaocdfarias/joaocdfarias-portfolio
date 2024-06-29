@@ -1,58 +1,53 @@
-import React, { PropsWithChildren } from 'react'
+import React from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Nav({ children }: Readonly<PropsWithChildren>) {
+export default function Nav() {
   return (
-    <div className="flex before:h-[100vh] before:w-0.5 before:bg-[#E9ECEF] after:h-[100vh] after:w-0.5 after:bg-[#E9ECEF] after:ml-14">
-      <aside className="flex after:flex after:h-[100vh] after:w-0.5 after:bg-[#E9ECEF]">
-        <div className='w-max h-max'>
+    <aside className="flex flex-col gap-4 pt-32 h-[100vh] w-max">
+      <Image
+        src="/images/profile.jpeg"
+        alt="Profile image"
+        width={218}
+        height={218}
+        className="rounded-xl"
+      />
+      <p className="font-bold text-4xl text-title"> João Carlos </p>
+      <ul className="flex flex-col gap-2">
+        <li className="text-text flex gap-2">
           <Image
-            src="/images/profile.jpeg"
-            alt="Profile image"
-            width={218}
-            height={218}
-            className="rounded-xl"
+            src="/images/person.png"
+            alt="Mail icon"
+            width={16}
+            height={16}
+            className="self-center"
           />
-          <p className="font-bold text-4xl text-[#00111C]"> João Carlos </p>
-          <ul>
-            <li className="text-[#001523] flex gap-2">
-              <Image
-                src="/images/person.png"
-                alt="Mail icon"
-                width={16}
-                height={16}
-                className="self-center"
-              />
-              Software Engineer
-            </li>
-            <li className="text-[#001523] flex gap-2">
-              <Image
-                src="/images/pin.png"
-                alt="Mail icon"
-                width={16}
-                height={16}
-                className="self-center"
-              />
-              <Link href="">Salvador, Bahia, Brazil</Link>
-            </li>
-            <li className="text-[#001523] flex gap-2">
-              <Image
-                src="/images/mail.png"
-                alt="Mail icon"
-                width={16}
-                height={16}
-                className="self-center"
-              />
-              <Link href="mailto:joaocdfariass@gmail.com">
-                joaocdfariass@gmail.com
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </aside>
-      {children}
-    </div>
+          Software Engineer
+        </li>
+        <li className="text-text flex gap-2">
+          <Image
+            src="/images/pin.png"
+            alt="Mail icon"
+            width={16}
+            height={16}
+            className="self-center"
+          />
+          <Link href="">Salvador, Bahia, Brazil</Link>
+        </li>
+        <li className="text-text flex gap-2">
+          <Image
+            src="/images/mail.png"
+            alt="Mail icon"
+            width={16}
+            height={16}
+            className="self-center"
+          />
+          <Link href="mailto:joaocdfariass@gmail.com">
+            joaocdfariass@gmail.com
+          </Link>
+        </li>
+      </ul>
+    </aside>
   )
 }

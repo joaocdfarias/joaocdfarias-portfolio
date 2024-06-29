@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { Be_Vietnam_Pro } from 'next/font/google'
 
-import Nav from '../components/Nav/Nav'
+import Nav from '@/components/Nav/Nav'
+import Container from '@/components/Container/Container'
 
 import './globals.css'
-import Container from '../components/Container/Container'
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ['latin'],
@@ -25,7 +25,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={beVietnamPro.className}>
         <Container>
-          <Nav> {children} </Nav>
+          <Nav />
+          {children}
         </Container>
       </body>
     </html>

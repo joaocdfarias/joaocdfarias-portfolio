@@ -1,8 +1,8 @@
-import About from '../sections/About/About'
+import { About } from '@/sections'
 
 export default function Home() {
   return (
-    <main>
+    <main className="max-w-[600px]">
       <About />
     </main>
   )
