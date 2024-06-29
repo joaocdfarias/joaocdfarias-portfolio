@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Be_Vietnam_Pro } from 'next/font/google'
 
-import Nav from '@/components/Nav/Nav'
-import Container from '@/components/Container/Container'
+import { Sidebar, Container, Header } from '@/components'
 
 import './globals.css'
 
@@ -25,8 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={beVietnamPro.className}>
         <Container>
-          <Nav />
+          <Sidebar />
           {children}
+          <Header />
         </Container>
       </body>
     </html>

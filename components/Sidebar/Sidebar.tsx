@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Nav() {
+export const Sidebar = () => {
   return (
     <aside className="flex flex-col gap-4 pt-32 h-[100vh] w-max">
       <Image
@@ -12,6 +12,7 @@ export default function Nav() {
         width={218}
         height={218}
         className="rounded-xl"
+        priority
       />
       <p className="font-bold text-4xl text-title"> João Carlos </p>
       <ul className="flex flex-col gap-2">
@@ -33,7 +34,10 @@ export default function Nav() {
             height={16}
             className="self-center"
           />
-          <Link href="https://maps.app.goo.gl/3DaKEwwQDfWLDsf38" target='_blank'>
+          <Link
+            href="https://maps.app.goo.gl/3DaKEwwQDfWLDsf38"
+            target="_blank"
+          >
             Salvador, Bahia, Brazil
           </Link>
         </li>

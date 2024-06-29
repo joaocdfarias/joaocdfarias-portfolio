@@ -1,23 +1,24 @@
 import React from 'react'
 
-import IconLink, { IconLinkProps } from '@/components/IconLink/IconLink'
+import { Icon } from '@/components'
 import { GitHub, Twitter, LinkedIn } from '@/icons'
+import Link from 'next/link'
 
-const icons: IconLinkProps[] = [
+const icons = [
   {
     href: 'https://www.linkedin.com/in/joaocdfarias/',
     icon: <LinkedIn />,
-    name: 'LinkedIn',
+    tooltip: 'LinkedIn',
   },
   {
     href: 'https://github.com/joaocdfarias',
     icon: <GitHub />,
-    name: 'GitHub',
+    tooltip: 'GitHub',
   },
   {
     href: 'https://x.com/joaocdfarias',
     icon: <Twitter />,
-    name: 'Twitter',
+    tooltip: 'Twitter',
   },
 ]
 
@@ -25,7 +26,7 @@ export const About = () => {
   return (
     <section className="pt-32">
       <p className="text-4xl text-title font-bold mb-2"> 👋 Hi there! </p>
-      <div className='font-light'>
+      <div className="font-light">
         <p className="text-text">
           I’m João Carlos, a dedicated Software Engineer, passionate about
           creating efficient solutions and applications with expertise in React
@@ -45,7 +46,9 @@ export const About = () => {
       <ul className="mt-2 flex gap-4">
         {icons.map((icon) => (
           <li className="w-max" key={icon.href}>
-            <IconLink href={icon.href} icon={icon.icon} name={icon.name} />
+            <Link href={icon.href}>
+              <Icon icon={icon.icon} tooltip={icon.tooltip} hasTooltip />
+            </Link>
           </li>
         ))}
       </ul>

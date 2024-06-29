@@ -1,1 +1,5 @@
 export * from './Paper'
+export * from './Header'
+export * from './Icon'
+export * from './Sidebar'
+export * from './Container'
