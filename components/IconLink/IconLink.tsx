@@ -16,7 +16,7 @@ export default function IconLink({
   return (
     <Link href={href} className="group relative">
       <Icon>{icon}</Icon>
-      <span className="absolute top-12 left-[-8px] scale-0 transition-all rounded bg-gray-500 p-2 text-xs text-white group-hover:scale-100 text-center">
+      <span className="absolute top-12 left-[-8px] scale-0 transition-all rounded bg-backgroundPrimary p-2 text-xs text-white group-hover:scale-100 text-center">
         {name}
       </span>
     </Link>

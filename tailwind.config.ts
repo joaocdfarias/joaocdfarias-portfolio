@@ -19,10 +19,12 @@ const config: Config = {
     colors: {
       body: '#F8F9FA',
       text: '#001523',
+      textSecondary: '#001A2C',
       title: '#00111C',
       icon: '#001A2C',
       backgroundPrimary: '#DEE2E6',
-      backgroundSecondary: '#E9ECEF'
+      backgroundSecondary: '#E9ECEF',
+      backgroundSecondaryStroke: '#DEE2E6',
     },
   },
   plugins: [],
