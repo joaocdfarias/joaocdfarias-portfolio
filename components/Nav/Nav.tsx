@@ -33,7 +33,9 @@ export default function Nav() {
             height={16}
             className="self-center"
           />
-          <Link href="">Salvador, Bahia, Brazil</Link>
+          <Link href="https://maps.app.goo.gl/3DaKEwwQDfWLDsf38" target='_blank'>
+            Salvador, Bahia, Brazil
+          </Link>
         </li>
         <li className="text-text flex gap-2">
           <Image

@@ -9,7 +9,7 @@ export const Work = () => {
     <section className='mt-16'>
       <Paper>
         <div className="flex gap-3">
-          <Icon>
+          <Icon hasAfter>
             <Briefcase />
           </Icon>
           <div>
