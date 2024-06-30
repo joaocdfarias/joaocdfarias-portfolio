@@ -4,10 +4,13 @@ import React, { useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 
+import { Icon } from '@/components'
+import { Home, Sun, Blog, Code } from '@/icons'
+
 const tabs = [
-  { id: 'home', text: 'Home', href: '/' },
-  { id: 'blog', text: 'Blog', href: '/blog' },
-  { id: 'projects', text: 'Projects', href: '/projects' },
+  { id: 'home', text: 'Home', href: '/', icon: <Home /> },
+  { id: 'blog', text: 'Blog', href: '/blog', icon: <Blog /> },
+  { id: 'projects', text: 'Projects', href: '/projects', icon: <Code /> },
 ]
 
 export const Header = () => {
@@ -16,36 +19,59 @@ export const Header = () => {
   const [current, setCurrent] = useState(pathname)
 
   return (
-    <header className="fixed text-text top-6">
-      <nav className="p-4 rounded-full bg-backgroundSecondary border-backgroundSecondaryStroke">
+    <motion.header
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="fixed text-text top-6"
+    >
+      <nav className="p-2 rounded-lg bg-backgroundSecondary flex">
         <ul className="flex gap-2">
-          {tabs.map((tab) => (
-            <button
-              onClick={() => {
-                setCurrent(tab.href)
-                push(tab.href)
-              }}
-              key={tab.id}
-            >
-              <li
-                className={`${
-                  current === tab.href ? '' : 'hover:opacity-50'
-                } relative px-4 py-2`}
-              >
-                {current === tab.href && (
-                  <motion.div
-                    layoutId="active-pill"
-                    className="rounded-full bg-text/30 absolute inset-0"
-                    style={{ borderRadius: 9999 }}
-                  />
-                )}
+          {tabs.map((tab) => {
+            const isCurrentTab = current === tab.href
 
-                <span className="relative"> {tab.text} </span>
-              </li>
-            </button>
-          ))}
+            return (
+              <button
+                onClick={() => {
+                  setCurrent(tab.href)
+                  push(tab.href)
+                }}
+                key={tab.id}
+              >
+                <li
+                  className={`${
+                    isCurrentTab ? '' : 'hover:opacity-50'
+                  } relative px-4 py-2`}
+                >
+                  {isCurrentTab && (
+                    <motion.div
+                      layoutId="active-pill"
+                      className="bg-backgroundPrimary absolute inset-0"
+                      style={{ borderRadius: 8 }}
+                    />
+                  )}
+
+                  <span className="relative flex gap-2 items-center">
+                    {isCurrentTab && (
+                      <motion.div
+                        initial={{ y: 10, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.1, type: 'spring' }}
+                        className="text-text"
+                      >
+                        {tab.icon}
+                      </motion.div>
+                    )}
+                    {tab.text}
+                  </span>
+                </li>
+              </button>
+            )
+          })}
         </ul>
+        <button className="flex gap-4 before:block before:w-[1px] before:h-full before:bg-backgroundPrimary">
+          <Icon icon={<Sun />} />
+        </button>
       </nav>
-    </header>
+    </motion.header>
   )
 }

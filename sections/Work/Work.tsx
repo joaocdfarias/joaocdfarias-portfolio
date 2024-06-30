@@ -13,7 +13,11 @@ export const Work = () => {
             <p className="text-3xl font-bold text-title"> Work </p>
             <p className="text-lg text-text mt-3">
               Software Engineer @{' '}
-              <Link href="https://sanar.com.br/" target="_blank">
+              <Link
+                href="https://sanar.com.br/"
+                target="_blank"
+                className="underline"
+              >
                 Sanar
               </Link>
               — since 2021

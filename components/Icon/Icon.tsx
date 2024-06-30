@@ -7,7 +7,7 @@ export const iconVariants = tv({
     color: {
       primary: 'bg-backgroundPrimary',
       secondary: 'bg-backgroundSecondary',
-      border: 'bg-backgroundPrimary',
+      transparent: 'bg-transparent',
     },
     withText: {
       primary: 'py-2 px-4',

@@ -15,7 +15,11 @@ export const Education = () => {
             <p className="text-3xl font-bold text-title"> Education </p>
             <p className="text-lg text-text mt-3">
               BSc Computer Science @{' '}
-              <Link href="https://www.unifacs.br/" target="_blank">
+              <Link
+                href="https://www.unifacs.br/"
+                target="_blank"
+                className="underline"
+              >
                 UNIFACS
               </Link>
               — 2023 to 2027
