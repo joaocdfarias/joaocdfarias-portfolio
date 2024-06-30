@@ -21,12 +21,15 @@ const config: Config = {
       text: {
         primary: {
           light: '#001523',
+          dark: '#E9ECEF',
         },
         secondary: {
           light: '#001A2C',
+          dark: '#F8F9FA',
         },
         title: {
           light: '#00111C',
+          dark: '#DEE2E6',
         },
       },
       icon: {
@@ -35,9 +38,12 @@ const config: Config = {
       background: {
         primary: {
           light: '#DEE2E6',
+          dark: '#343A40',
         },
         secondary: {
           light: '#E9ECEF',
+          dark: '#212529',
+          stroke: '#394047',
         },
         transparent: 'transparent',
       },
