@@ -10,8 +10,8 @@ export const Work = () => {
         <div className="flex gap-3">
           <Icon hasAfter icon={<Briefcase />} />
           <div>
-            <p className="text-3xl font-bold text-title"> Work </p>
-            <p className="text-lg text-text mt-3">
+            <p className="text-3xl font-bold text-text-title-light"> Work </p>
+            <p className="text-lg text-text-primary-light mt-3">
               Software Engineer @{' '}
               <Link
                 href="https://sanar.com.br/"
@@ -22,7 +22,7 @@ export const Work = () => {
               </Link>
               — since 2021
             </p>
-            <p className="text-textSecondary font-light mt-1">
+            <p className="text-text-secondary-light font-light mt-1">
               At Sanar I work as a Software Engineer at the Payments Team. I
               also was part of Postgraduate Team as Frontend Engineer and
               Product and Platform Analyst.

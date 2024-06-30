@@ -18,15 +18,32 @@ const config: Config = {
     },
     colors: {
       body: '#F8F9FA',
-      text: '#001523',
-      textSecondary: '#001A2C',
-      title: '#00111C',
-      icon: '#001A2C',
-      backgroundPrimary: '#DEE2E6',
-      backgroundSecondary: '#E9ECEF',
-      backgroundSecondaryStroke: '#DEE2E6',
+      text: {
+        primary: {
+          light: '#001523',
+        },
+        secondary: {
+          light: '#001A2C',
+        },
+        title: {
+          light: '#00111C',
+        },
+      },
+      icon: {
+        primary: '#001A2C',
+      },
+      background: {
+        primary: {
+          light: '#DEE2E6',
+        },
+        secondary: {
+          light: '#E9ECEF',
+        },
+        transparent: 'transparent',
+      },
     },
   },
   plugins: [],
+  darkMode: 'selector',
 }
 export default config

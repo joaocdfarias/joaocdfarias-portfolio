@@ -2,12 +2,12 @@ import React from 'react'
 import { tv } from 'tailwind-variants'
 
 export const iconVariants = tv({
-  base: 'bg-backgroundPrimary rounded-md w-max h-max p-2 text-icon flex gap-2',
+  base: 'bg-background-primary-light rounded-md w-max h-max p-2 text-icon-primary flex gap-2',
   variants: {
     color: {
-      primary: 'bg-backgroundPrimary',
-      secondary: 'bg-backgroundSecondary',
-      transparent: 'bg-transparent',
+      primary: 'bg-background-primary-light',
+      secondary: 'bg-background-secondary-light',
+      transparent: 'bg-background-transparent',
     },
     withText: {
       primary: 'py-2 px-4',
@@ -42,13 +42,13 @@ export const Icon = ({
         })}
       >
         {icon}
-        {Boolean(text) && <p className="text-textSecondary"> {text} </p>}
+        {Boolean(text) && <p className="text-text-secondary-light"> {text} </p>}
       </div>
       {hasAfter && (
-        <span className="bg-gradient-to-t from-backgroundSecondary to-backgroundPrimary w-[2px] h-full" />
+        <span className="bg-gradient-to-t from-background-secondary-light to-background-primary-light w-[2px] h-full" />
       )}
       {hasTooltip && (
-        <span className="absolute top-12 left-[-8px] scale-0 transition-all rounded bg-backgroundPrimary p-2 text-xs text-white group-hover:scale-100 text-center">
+        <span className="absolute top-12 left-[-8px] scale-0 transition-all rounded bg-background-primary-light p-2 text-xs text-text-primary group-hover:scale-100 text-center">
           {tooltip}
         </span>
       )}

@@ -14,22 +14,22 @@ export const Sidebar = () => {
         className="rounded-xl"
         priority
       />
-      <p className="font-bold text-4xl text-title"> João Carlos </p>
+      <p className="font-bold text-4xl text-text-title-light"> João Carlos </p>
       <ul className="flex flex-col gap-2">
-        <li className="text-text flex gap-2">
+        <li className="text-text-primary-light flex gap-2">
           <Image
             src="/images/person.png"
-            alt="Mail icon"
+            alt="Person icon"
             width={16}
             height={16}
             className="self-center"
           />
           Software Engineer
         </li>
-        <li className="text-text flex gap-2">
+        <li className="text-text-primary-light flex gap-2">
           <Image
             src="/images/pin.png"
-            alt="Mail icon"
+            alt="Pin icon"
             width={16}
             height={16}
             className="self-center"
@@ -41,7 +41,7 @@ export const Sidebar = () => {
             Salvador, Bahia, Brazil
           </Link>
         </li>
-        <li className="text-text flex gap-2">
+        <li className="text-text-primary-light flex gap-2">
           <Image
             src="/images/mail.png"
             alt="Mail icon"
