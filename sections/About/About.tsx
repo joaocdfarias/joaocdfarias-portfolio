@@ -25,23 +25,27 @@ const icons = [
 export const About = () => {
   return (
     <section className="pt-32">
-      <p className="text-4xl text-text-title-light font-bold mb-2"> 👋 Hi there! </p>
+      <p className="text-4xl text-text-title-light dark:text-text-title-dark font-bold mb-2">
+        👋 Hi there!
+      </p>
       <div className="font-light">
-        <p className="text-text-primary-light">
+        <p className="text-text-primary-light dark:text-text-primary-dark">
           I’m João Carlos, a dedicated Software Engineer, passionate about
           creating efficient solutions and applications with expertise in React
           and Nest.js. My professional philosophy is: continuous learning. It
           drives me to stay updated with latest tech.
         </p>
         <br />
-        <p className="text-text-primary-light">
+        <p className="text-text-primary-light dark:text-text-primary-dark">
           Outside of work, I like to practice sports such as Muay Thai and BJJ.
           I also like design (mainly UI design), I also enjoy going to the gym
           and running. In my spare time, I create personal projects to push my
           skills.
         </p>
         <br />
-        <p className="text-text-primary-light">Connect with me:</p>
+        <p className="text-text-primary-light dark:text-text-primary-dark">
+          Connect with me:
+        </p>
       </div>
       <ul className="mt-2 flex gap-4">
         {icons.map((icon) => (

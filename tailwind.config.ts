@@ -17,7 +17,10 @@ const config: Config = {
       },
     },
     colors: {
-      body: '#F8F9FA',
+      body: {
+        light: '#F8F9FA',
+        dark: '#212529'
+      },
       text: {
         primary: {
           light: '#001523',
@@ -33,7 +36,10 @@ const config: Config = {
         },
       },
       icon: {
-        primary: '#001A2C',
+        primary: {
+          light: '#001A2C',
+          dark: '#DEE2E6'
+        },
       },
       background: {
         primary: {

@@ -14,9 +14,11 @@ export const Sidebar = () => {
         className="rounded-xl"
         priority
       />
-      <p className="font-bold text-4xl text-text-title-light"> João Carlos </p>
+      <p className="font-bold text-4xl text-text-title-light dark:text-text-title-dark">
+        João Carlos
+      </p>
       <ul className="flex flex-col gap-2">
-        <li className="text-text-primary-light flex gap-2">
+        <li className="text-text-primary-light dark:text-text-primary-dark flex gap-2">
           <Image
             src="/images/person.png"
             alt="Person icon"
@@ -26,7 +28,7 @@ export const Sidebar = () => {
           />
           Software Engineer
         </li>
-        <li className="text-text-primary-light flex gap-2">
+        <li className="text-text-primary-light dark:text-text-primary-dark flex gap-2">
           <Image
             src="/images/pin.png"
             alt="Pin icon"
@@ -41,7 +43,7 @@ export const Sidebar = () => {
             Salvador, Bahia, Brazil
           </Link>
         </li>
-        <li className="text-text-primary-light flex gap-2">
+        <li className="text-text-primary-light dark:text-text-primary-dark flex gap-2">
           <Image
             src="/images/mail.png"
             alt="Mail icon"

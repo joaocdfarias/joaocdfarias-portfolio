@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Be_Vietnam_Pro } from 'next/font/google'
+import { ThemeProvider } from 'next-themes'
 
 import { Sidebar, Container, Header } from '@/components'
 
@@ -21,13 +22,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${beVietnamPro.className}`}>
-        <Container>
-          <Sidebar />
-          {children}
-          <Header />
-        </Container>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${beVietnamPro.className} bg-body-light dark:bg-body-dark`}
+      >
+        <ThemeProvider attribute="class">
+          <Container>
+            <Sidebar />
+            {children}
+            <Header />
+          </Container>
+        </ThemeProvider>
       </body>
     </html>
   )

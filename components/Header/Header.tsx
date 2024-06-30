@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 
-import { Icon } from '@/components'
-import { Home, Sun, Blog, Code } from '@/icons'
+import { ThemeSwitcher } from '@/components'
+import { Home, Blog, Code } from '@/icons'
 
 const tabs = [
   { id: 'home', text: 'Home', href: '/', icon: <Home /> },
@@ -22,9 +22,9 @@ export const Header = () => {
     <motion.header
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="fixed text-text-primary-light top-6"
+      className="fixed text-text-primary-light dark:text-text-primary-dark top-6 dark:border-background-secondary-stroke dark:border-[1px] dark:rounded-lg"
     >
-      <nav className="p-2 rounded-lg bg-background-secondary-light flex">
+      <nav className="p-2 rounded-lg bg-background-secondary-light dark:bg-background-secondary-dark flex">
         <ul className="flex gap-2">
           {tabs.map((tab) => {
             const isCurrentTab = current === tab.href
@@ -45,7 +45,7 @@ export const Header = () => {
                   {isCurrentTab && (
                     <motion.div
                       layoutId="active-pill"
-                      className="bg-background-primary-light absolute inset-0"
+                      className="bg-background-primary-light dark:bg-background-primary-dark absolute inset-0"
                       style={{ borderRadius: 8 }}
                     />
                   )}
@@ -56,7 +56,7 @@ export const Header = () => {
                         initial={{ y: 10, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.1, type: 'spring' }}
-                        className="text-text-primary-light"
+                        className="text-text-primary-light dark:text-text-primary-dark"
                       >
                         {tab.icon}
                       </motion.div>
@@ -68,9 +68,7 @@ export const Header = () => {
             )
           })}
         </ul>
-        <button className="flex gap-4 before:block before:w-[1px] before:h-full before:bg-background-primary-light">
-          <Icon icon={<Sun />} />
-        </button>
+        <ThemeSwitcher />
       </nav>
     </motion.header>
   )

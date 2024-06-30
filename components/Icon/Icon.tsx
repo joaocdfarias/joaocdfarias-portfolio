@@ -2,11 +2,12 @@ import React from 'react'
 import { tv } from 'tailwind-variants'
 
 export const iconVariants = tv({
-  base: 'bg-background-primary-light rounded-md w-max h-max p-2 text-icon-primary flex gap-2',
+  base: 'bg-background-primary-light dark:bg-background-primary-dark rounded-md w-max h-max p-2 text-icon-primary-light dark:text-icon-primary-dark flex gap-2',
   variants: {
     color: {
-      primary: 'bg-background-primary-light',
-      secondary: 'bg-background-secondary-light',
+      primary: 'bg-background-primary-light dark:bg-background-primary-dark',
+      secondary:
+        'bg-background-secondary-light dark:bg-background-secondary-dark',
       transparent: 'bg-background-transparent',
     },
     withText: {
@@ -42,13 +43,17 @@ export const Icon = ({
         })}
       >
         {icon}
-        {Boolean(text) && <p className="text-text-secondary-light"> {text} </p>}
+        {Boolean(text) && (
+          <p className="text-text-secondary-light dark:text-text-secondary-dark">
+            {text}
+          </p>
+        )}
       </div>
       {hasAfter && (
-        <span className="bg-gradient-to-t from-background-secondary-light to-background-primary-light w-[2px] h-full" />
+        <span className="bg-gradient-to-t from-background-secondary-light to-background-primary-light dark:from-background-secondary-dark dark:to-background-primary-dark w-[2px] h-full" />
       )}
       {hasTooltip && (
-        <span className="absolute top-12 left-[-8px] scale-0 transition-all rounded bg-background-primary-light p-2 text-xs text-text-primary group-hover:scale-100 text-center">
+        <span className="absolute top-12 left-[-8px] scale-0 transition-all rounded bg-background-primary-light dark:bg-background-primary-dark p-2 text-xs text-text-primary group-hover:scale-100 text-center">
           {tooltip}
         </span>
       )}
